@@ -10,7 +10,12 @@ class Node{
 			string rsur="node "+url;
 			system(rsur.c_str());
 		}
-		
+		void del(){
+			ofstream out;
+			out.open(url.c_str());
+			out<<"";
+			out.close();
+		} 
 };
 class Node_js{
 	public:
@@ -25,4 +30,10 @@ class Node_js{
 			string rsur="node "+jsurl;
 			system(rsur.c_str());
 		}
+		void del(){
+			ofstream out;
+			out.open(jsurl.c_str());
+			out<<"";
+			out.close();
+		} 
 };
