@@ -17,6 +17,24 @@ class Node{
 			out.close();
 		} 
 };
+string in(string json_string,string what,string cfrom_url){
+		ofstream out;
+		string jsurl=cfrom_url+"json.js";
+		out.open(jsurl.c_str());
+		out<<"var fs = require('fs');\n";
+		out<<"var json="<<json_string<<";\n";
+		out<<"fs.writeFile('test.txt',"<<"json."<<what<<",()=>{} );";
+		out.close();
+		string openjs="node "+jsurl;
+		system(openjs.c_str());
+		ifstream in;
+		string end;
+		string txturl=cfrom_url+"test.txt";
+		in.open(txturl.c_str());
+		in>>end;
+		in.close();
+		return end;
+}
 class Node_js{
 	public:
 		string jsurl;
