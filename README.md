@@ -11,6 +11,6 @@ Node.url
 Node.eval()`
 
 `Class:Node
-Node_js.jsurl`
+Node_js.jsurl
 Node.in()
 Node.run()`
